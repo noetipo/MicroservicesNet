@@ -1,0 +1,97 @@
+<div fxLayout="row wrap" fxLayoutAlign="space-around center">
+  <!--<div *ngFor="let product of products; let i = index" class="card">-->
+    <!--<app-product-card [product]="product"></app-product-card>-->
+    <!--<mat-card>
+      <img
+        mat-card-image
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+
+      <mat-card-content>
+        <p>
+          <strong>
+            A dog is a domestic mammal of the family Canidae and the order
+            Carnivora.</strong
+          >
+          Its scientific name is Canis lupus familiaris. Dogs are a subspecies of
+          the gray wolf, and they are also related to foxes and jackals. Dogs are
+          one of the two most ubiquitous and most popular domestic animals in the
+          world.
+        </p>
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-button>Like ❤️</button>
+        <button mat-button>share 👍</button>
+      </mat-card-actions>
+    </mat-card>-->
+
+
+  <!--</div>-->
+</div>
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Name}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="TotalPrice">
+      <mat-header-cell *matHeaderCellDef> TotalPrice </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.TotalPrice}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="PolicyFron">
+      <mat-header-cell *matHeaderCellDef> PolicyFron </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.PolicyFron}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="PolicyTo">
+      <mat-header-cell *matHeaderCellDef> PolicyTo </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.PolicyTo}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="FirstName">
+      <mat-header-cell *matHeaderCellDef> FirstName </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.FirstName}} </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="LastName">
+      <mat-header-cell *matHeaderCellDef> LastName </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.LastName}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="TaxId">
+      <mat-header-cell *matHeaderCellDef> TaxId </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.TaxId}} </mat-cell>
+    </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="City">
+      <mat-header-cell *matHeaderCellDef> City </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.City}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Country">
+      <mat-header-cell *matHeaderCellDef> Country </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Country}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="ZipCode">
+      <mat-header-cell *matHeaderCellDef> ZipCode </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.ZipCode}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="Street">
+      <mat-header-cell *matHeaderCellDef> Street </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Street}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
